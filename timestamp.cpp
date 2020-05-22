@@ -3,7 +3,7 @@
 
 TimeStampData::TimeStampData()
 {
-	li_vn_mode =  (qint8) 227;
+    li_vn_mode =  (qint8) 227;
     stratum = (qint8) 3;
     poll = (qint8) 6;
     precision = (qint8) 0;
@@ -62,7 +62,7 @@ void TimestampWriter::setTimestampData(quint32 myTime_t, quint32 myTime_ms)
     dataStream << myTime_t;
     dataStream << myTime_ms; //(quint32) 0;
 
-	qDebug() << "Value setTimestampData: " << dataTimestampArray.toHex();
+    qDebug() << "Value setTimestampData: " << dataTimestampArray.toHex();
     sendDatagrams(dataTimestampArray);
 }
 
@@ -75,7 +75,7 @@ void TimestampWriter::sendDatagrams(QByteArray dateTimestampArray)
     {
         qDebug() << "Send";
         while (true)
-		{
+	{
             while (socket->hasPendingDatagrams())
             {
                 datagram.resize(socket->pendingDatagramSize());
