@@ -91,7 +91,7 @@ void TimestampWriter::printDatagram(QByteArray datagram)
      qDebug()   << "/*******************************/"
                 <<       "Message from server NTP"
                 << "/*******************************/"
-                << "\n";
+                << "\n"; 
 
     QDateTime *timestamp = new QDateTime();
 
